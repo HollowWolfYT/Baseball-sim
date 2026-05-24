@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"f:\\\\Downloads NEW\\\\mlb-baseball-game\\\\mlb-baseball-game\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(start http://localhost:5175)",
+      "Bash(Get-ChildItem -Path \"f:\\\\Downloads NEW\\\\mlb-baseball-game\\\\mlb-baseball-game\" -Recurse -File -Include \"*.js\", \"*.json\", \"*.html\")",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
