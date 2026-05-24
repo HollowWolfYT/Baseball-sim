@@ -8,6 +8,17 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { clone as skeletonClone } from 'three/examples/jsm/utils/SkeletonUtils.js';
 
+
+THREE.DefaultLoadingManager.setURLModifier((url) => {
+  const base = import.meta.env.BASE_URL;
+
+  if (url.startsWith('/') && !url.startsWith(base)) {
+    return base + url.slice(1);
+  }
+
+  return url;
+});
+
 // =============================================================================
 // TEAM CONFIGURATION
 // =============================================================================
